@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>全端工程師介紹</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica', sans-serif;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      animation: fadeIn 2s ease-in;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
+    }
+
+    .menu-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .content-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 900px;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    p, li {
+      line-height: 1.8;
+    }
+  </style>
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+  
+    .menu-icon {
+      font-size: 1.8rem;
+      color: white;
+      display: none;
+      cursor: pointer;
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+  
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+  
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.85);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px 20px;
+        border-radius: 12px;
+      }
+  
+      .nav-links.show {
+        display: flex;
+      }
+  
+      .nav-links a {
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">簡歷</a>
+          <a href="about.html">自傳</a>
+          <a href="career.html">全端工程師介紹</a>
+        </div>
+      </nav>
+      <script>
+        function toggleMenu() {
+          const nav = document.getElementById("navLinks");
+          nav.classList.toggle("show");
+        }
+      </script>
+
+  <div class="content-container">
+    <h1>全端工程師職涯介紹</h1>
+
+    <h2>💼 工作內容</h2>
+    <ul>
+      <li>設計與開發網站的前端與後端功能</li>
+      <li>維護資料庫、伺服器與 API</li>
+      <li>與 UI/UX 設計師、PM、其他工程師協作</li>
+      <li>撰寫與測試應用程式，優化效能與使用體驗</li>
+    </ul>
+
+    <h2>🧠 所需技能</h2>
+    <p><strong>前端：</strong>HTML、CSS、JavaScript、React / Vue / Angular</p>
+    <p><strong>後端：</strong>Node.js、Python、PHP、Java、Express、Flask 等</p>
+    <p><strong>資料庫：</strong>MySQL、MongoDB、PostgreSQL 等</p>
+    <p><strong>其他工具：</strong>Git、Docker、Firebase、API設計、GitHub、Linux</p>
+
+    <h2>📚 建議學習路徑</h2>
+    <ol>
+      <li>打好 HTML / CSS / JS 基礎</li>
+      <li>學習至少一套前端框架（如 React）</li>
+      <li>接觸 Node.js 或 Python + Express / Flask</li>
+      <li>整合資料庫 + RESTful API 實作</li>
+      <li>部署網站（使用 Vercel / Netlify / Heroku）</li>
+    </ol>
+
+    <h2>📈 職涯發展</h2>
+    <p>從初階工程師累積經驗後，可以朝下列方向發展：</p>
+    <ul>
+      <li>資深全端工程師</li>
+      <li>技術主管 / 技術長（CTO）</li>
+      <li>創業開發產品</li>
+      <li>轉向前端專精 / 後端架構設計 / DevOps 工程師</li>
+    </ul>
+
+    <h3>
+    <a class="job-button" href="https://www.104.com.tw/jobs/search/?jobsource=index_s&keyword=%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB&mode=s&order=15&page=1" target="_blank">
+        🔍 全端工程師職缺
+      </a>
+    </h3>
+  </div>
+</body>
+</html>

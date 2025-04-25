@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>個人簡歷</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica', sans-serif;
+      background-image: url('bg2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      animation: fadeIn 2s ease-in;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
+    }
+
+    .menu-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .content-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 1000px;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .text-section {
+      flex: 1 1 60%;
+    }
+
+    .photo-section {
+      flex: 1 1 30%;
+      text-align: center;
+    }
+
+    .photo-section img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+  
+    .menu-icon {
+      font-size: 1.8rem;
+      color: white;
+      display: none;
+      cursor: pointer;
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+  
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+  
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.85);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px 20px;
+        border-radius: 12px;
+      }
+  
+      .nav-links.show {
+        display: flex;
+      }
+  
+      .nav-links a {
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">簡歷</a>
+      <a href="about.html">自傳</a>
+      <a href="career.html">全端工程師介紹</a>
+    </div>
+  </nav>
+  
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
+
+
+
+<div class="content-container">
+  <div class="text-section">
+    <h2>📄 個人簡歷</h2>
+    <p><strong>姓名：</strong>林政彥</p>
+    <p><strong>班級：</strong>資管二B</p>
+    <p><strong>學號：</strong>411203259</p>
+    <p><strong>出生年月日：</strong>93.09.24</p>
+    <p><strong>聯絡電話：</strong>0965609119</p>
+    <p><strong>電子郵件：</strong>garry240993@gmail.com</p>
+    <p><strong>地址：</strong>台中市沙鹿區六路二街60巷11號</p>
+
+    <h3>🎓 教育背景</h3>
+    <ul>
+      <li>2023－就讀 靜宜大學 資訊管理學系</li>
+      <li>2020－2023 旭光高級中學</li>
+      <li>2017－2020 光復國中</li>
+      <li>2011－2017 光正國小</li>
+    </ul>
+
+    <h3>🧰 工讀經驗</h3>
+    <ul>
+      <li>2023.07－2023.09：大買家國光店收銀員</li>
+      <li>2024.07－2024.09：豐民金屬工業股份有限公司 工廠作業員</li>
+    </ul>
+
+    <h3>💼 擔任職務與社團</h3>
+    <ul>
+      <li>曾任：班長、風紀股長、衛生股長、學藝股長</li>
+      <li>2023－：資管系排球隊長</li>
+    </ul>
+
+    <h3>📘 在校修課</h3>
+    <p>資訊入門、專業英文導讀、資訊數學、程式設計、計算機概論、管理學、經濟學、會計學、電子商務、程式語言、ERP、網路通訊概論、資料結構、統計學、軟體工程、網路行銷、行動應用軟體開發、資料庫管理、資訊管理導論、巨量資料分析導論、C語言程式設計、網頁前端程式</p>
+
+    <h3>💻 電腦技能</h3>
+    <ul>
+      <li>中英文輸入、Office 系統（Word, Excel, PowerPoint, Access）</li>
+      <li>Firebase、Vercel、GitHub、C、Java</li>
+    </ul>
+
+    <h3>📜 專業證照</h3>
+    <ul>
+      <li>ERP規劃師證書</li>
+      <img src="ERP.png" alt="ERP規劃師證書" />
+    </ul>
+  </div>
+
+  <div class="photo-section">
+    <img src="profile.png" alt="個人照片">
+  </div>
+</div>
+
+</body>
+</html>
