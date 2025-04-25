@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>自傳</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica', sans-serif;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      animation: fadeIn 2s ease-in;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
+    }
+
+    .menu-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .content-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 900px;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    .job-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .job-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+  
+    .menu-icon {
+      font-size: 1.8rem;
+      color: white;
+      display: none;
+      cursor: pointer;
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+  
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+  
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.85);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px 20px;
+        border-radius: 12px;
+      }
+  
+      .nav-links.show {
+        display: flex;
+      }
+  
+      .nav-links a {
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">簡歷</a>
+      <a href="about.html">自傳</a>
+      <a href="career.html">全端工程師介紹</a>
+    </div>
+  </nav>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
+
+<div class="content-container">
+  <h2>自傳</h2>
+  <p>我是一位資訊管理系的大二學生，對於系統開發與問題解決充滿熱情。根據104人力銀行的興趣測驗，我屬於研究型（I）與實作型（R）的組合，這使我在學習新技術時，能夠深入理解其原理並實際應用。</p>
+  <p>在學期間，我修習了資料庫管理、程式設計、網頁開發等課程，並參與了多個專題製作，累積了豐富的實作經驗。我喜歡動手解決問題，並從中學習新的知識，這與全端工程師需要的技能與特質相符。</p>
+  <p>未來，我計畫進一步學習前端框架如React或Vue，以及後端技術如Node.js或Python，並參加相關的研習課程與實習機會，提升自己的實務能力。我相信，透過不斷的學習與實踐，我能夠成為一位優秀的全端工程師。</p>
+
+  <a class="job-button" href="https://guide.104.com.tw/interest/RI" target="_blank">關於興趣何倫碼</a>
+
+  <hr/>
+<h3>📊 我的 CPAS 人才測評結果</h3>
+
+<h4>🔹 人格特性雷達圖 & 職業適性分析</h4>
+<img src="CPAS1.png" alt="人格雷達圖與職業適性圖" style="width:100%; max-width:800px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.4); margin-bottom: 1rem;">
+
+<img src="CPAS2.png" alt="12項人格特性表與六大職能圖" style="width:100%; max-width:800px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.4); margin-bottom: 1rem;">
+
+<h5>📌 重點診斷摘要</h5>
+<ul>
+  <li>處事踏實，有持續力，工作態度穩定。</li>
+  <li>思考力與柔軟性表現優異，擁有良好「應變力」。</li>
+  <li>共感性偏低，社交互動需多練習與留意。</li>
+  <li>情緒安定但態度偏冷靜，容易給人嚴肅印象。</li>
+  <li>適合從事：系統分析、資訊管理、內勤行政等穩定類職務。</li>
+</ul>
+</div>
+
+</body>
+</html>
